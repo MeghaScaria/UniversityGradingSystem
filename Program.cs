@@ -10,7 +10,9 @@ ConsolePrinter printer = new();
 InputValidator validator = new();
 
 StudentInputService inputService = new StudentInputService(validator);
-ResultService resultService = new();
+
+GradeCalculator gradeCalculator = new();
+ResultService resultService = new ResultService(gradeCalculator);
 
 Student? currentStudent = null;
 Result? currentResult = null;
