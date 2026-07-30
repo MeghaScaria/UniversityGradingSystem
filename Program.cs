@@ -1,4 +1,4 @@
-﻿// namespaces
+﻿// Composition Root
 using UniversityGradingSystem.Models;
 using UniversityGradingSystem.Services;
 using UniversityGradingSystem.UI;
