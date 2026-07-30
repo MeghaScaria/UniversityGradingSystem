@@ -7,7 +7,9 @@ using UniversityGradingSystem.UI;
 Menu menu = new();
 ConsolePrinter printer = new();
 
-StudentInputService inputService = new();
+InputValidator validator = new();
+
+StudentInputService inputService = new StudentInputService(validator);
 ResultService resultService = new();
 
 Student? currentStudent = null;
