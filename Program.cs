@@ -4,7 +4,7 @@ using UniversityGradingSystem.Services;
 using UniversityGradingSystem.UI;
 
 //target-typed new expressions
-Menu menu = new();
+MenuView menu = new();
 ConsolePrinter printer = new();
 
 StudentInputService inputService = new();
@@ -62,6 +62,15 @@ while (running)
             break;
 
         case "3":
+            // null check
+            if(currentStudent == null || currentResult == null)
+            {
+                Console.Clear();
+                printer.PrintError("No data to clear.");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                break;
+            }
 
             currentStudent = null;
             currentResult = null;

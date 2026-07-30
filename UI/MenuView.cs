@@ -1,6 +1,6 @@
 ﻿namespace UniversityGradingSystem.UI;
 
-public class Menu
+public class MenuView
 {
     public void DisplayMainMenu()
     {
