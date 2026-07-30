@@ -19,7 +19,7 @@ while (running)
 {
     menu.DisplayMainMenu();
 
-    string? choice = Console.ReadLine();
+    string choice = Console.ReadLine() ?? "";
 
     switch (choice)
     {

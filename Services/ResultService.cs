@@ -4,12 +4,8 @@ namespace UniversityGradingSystem.Services;
 
 public class ResultService
 {
-    private readonly GradeCalculator _gradeCalculator;
+    private readonly GradeCalculator _gradeCalculator  = new();
 
-    public ResultService()
-    {
-        _gradeCalculator = new GradeCalculator();
-    }
 
     public Result GenerateResult(Student student)
     {

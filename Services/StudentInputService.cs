@@ -4,12 +4,7 @@ namespace UniversityGradingSystem.Services;
 
 public class StudentInputService
 {
-    private readonly InputValidator _validator;
-
-    public StudentInputService()
-    {
-        _validator = new InputValidator();
-    }
+    public InputValidator _validator = new();
 
     public Student GetStudentDetails()
     {

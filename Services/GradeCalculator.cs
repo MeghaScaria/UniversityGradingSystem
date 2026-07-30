@@ -10,6 +10,7 @@ public class GradeCalculator
     // Calculates total marks obtained
     public double CalculateTotalMarks(Student student)
     {
+        //LINQ method lambda expression
         return student.Subjects.Sum(subject => subject.MarksObtained);
     }
 
