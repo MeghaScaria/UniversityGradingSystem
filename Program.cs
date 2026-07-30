@@ -67,6 +67,15 @@ while (running)
 
         case "3":
 
+            if (currentStudent == null || currentResult == null)
+            {
+                Console.Clear();
+                printer.PrintError("No data to clear.");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                break;
+            }
+
             currentStudent = null;
             currentResult = null;
 
