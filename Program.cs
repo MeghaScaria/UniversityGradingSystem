@@ -7,8 +7,12 @@ using UniversityGradingSystem.UI;
 MenuView menu = new();
 ConsolePrinter printer = new();
 
-StudentInputService inputService = new();
-ResultService resultService = new();
+// dependency-injection
+InputValidator validator = new();
+StudentInputService inputService = new StudentInputService(validator);
+
+GradeCalculator gradeCalculator = new();
+ResultService resultService = new ResultService(gradeCalculator);
 
 Student? currentStudent = null;
 Result? currentResult = null;
@@ -64,6 +68,15 @@ while (running)
         case "3":
             // null check
             if(currentStudent == null || currentResult == null)
+            {
+                Console.Clear();
+                printer.PrintError("No data to clear.");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
+                break;
+            }
+
+            if (currentStudent == null || currentResult == null)
             {
                 Console.Clear();
                 printer.PrintError("No data to clear.");

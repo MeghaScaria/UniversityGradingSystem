@@ -4,7 +4,16 @@ namespace UniversityGradingSystem.Services;
 
 public class StudentInputService
 {
-    public InputValidator _validator = new();
+    // declaring a field
+    // field - capable of holding reference
+    // = new() creates the object and stores reference in the field
+    private readonly InputValidator _validator;
+
+    public StudentInputService(InputValidator validator)
+    {
+        //copying the reference of the same object to _validator since there is no new()
+        _validator = validator;
+    }
 
     public Student GetStudentDetails()
     {
@@ -12,7 +21,7 @@ public class StudentInputService
 
         Console.Write("Enter Student ID: ");
 
-        while (true)
+        do
         {
             string? input = Console.ReadLine();
 
@@ -23,11 +32,11 @@ public class StudentInputService
             }
 
             Console.Write("Invalid Student ID. Try again: ");
-        }
+        } while (true);
 
         Console.Write("Enter Student Name: ");
 
-        while (true)
+        do
         {
             string? input = Console.ReadLine();
 
@@ -38,11 +47,11 @@ public class StudentInputService
             }
 
             Console.Write("Invalid Name. Try again: ");
-        }
+        } while(true);
 
         Console.Write("Enter Course Name: ");
 
-        while (true)
+        do
         {
             string? input = Console.ReadLine();
 
@@ -53,9 +62,9 @@ public class StudentInputService
             }
 
             Console.Write("Invalid Course Name. Try again: ");
-        }
+        } while (true) ;
 
-        Console.WriteLine();
+            Console.WriteLine();
 
         for (int i = 1; i <= 5; i++)
         {
