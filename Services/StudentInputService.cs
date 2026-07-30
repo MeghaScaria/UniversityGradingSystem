@@ -21,7 +21,7 @@ public class StudentInputService
 
         Console.Write("Enter Student ID: ");
 
-        while (true)
+        do
         {
             string? input = Console.ReadLine();
 
@@ -32,11 +32,11 @@ public class StudentInputService
             }
 
             Console.Write("Invalid Student ID. Try again: ");
-        }
+        } while (true);
 
         Console.Write("Enter Student Name: ");
 
-        while (true)
+        do
         {
             string? input = Console.ReadLine();
 
@@ -47,11 +47,11 @@ public class StudentInputService
             }
 
             Console.Write("Invalid Name. Try again: ");
-        }
+        } while(true);
 
         Console.Write("Enter Course Name: ");
 
-        while (true)
+        do
         {
             string? input = Console.ReadLine();
 
@@ -62,9 +62,9 @@ public class StudentInputService
             }
 
             Console.Write("Invalid Course Name. Try again: ");
-        }
+        } while (true) ;
 
-        Console.WriteLine();
+            Console.WriteLine();
 
         for (int i = 1; i <= 5; i++)
         {
