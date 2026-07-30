@@ -7,8 +7,8 @@ using UniversityGradingSystem.UI;
 Menu menu = new();
 ConsolePrinter printer = new();
 
+// dependency-injection
 InputValidator validator = new();
-
 StudentInputService inputService = new StudentInputService(validator);
 
 GradeCalculator gradeCalculator = new();
